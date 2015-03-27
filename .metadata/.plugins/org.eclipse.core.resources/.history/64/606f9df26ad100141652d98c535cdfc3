@@ -1,0 +1,5 @@
+package com.zaleus3.gui;
+
+public class ExitHandler {
+
+}

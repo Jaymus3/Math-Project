@@ -1,0 +1,14 @@
+package com.zaleus3.gui;
+
+import javax.swing.JFrame;
+
+public class GUIInit extends JFrame 
+{
+	public GUIInit()
+	{
+		setTitle("Standard Deviation Calculator");
+		setSize(640, 480);
+		setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+}

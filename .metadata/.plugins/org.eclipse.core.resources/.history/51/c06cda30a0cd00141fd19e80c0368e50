@@ -1,0 +1,57 @@
+package com.zaleus3.start;
+
+import java.util.Arrays;
+import java.util.Random;
+
+public class Starter 	
+	{
+	
+ int sum = 0;
+	//All of the numbers
+	static double[] scores ={ 8.4414, 7.3348, 7.8188, 8.4436, 7.9750,
+							  4.8576, 3.8390, 6.2612, 6.9652, 7.7440,
+							  7.7436, 7.2468, 5.6672, 7.0576, 7.7462,
+							  8.2412, 7.7506, 6.3844, 5.7970, 8.6240,
+							  8.1180, 7.5460, 7.6560, 6.8552, 7.5416,
+							  8.3226, 7.3590, 6.6748, 4.8048, 7.2600,
+							  5.2426, 7.5416, 9.1564, 7.9860, 7.4932,
+							  7.4844, 7.7000, 8.2192, 7.4140, 4.6662,
+							  6.9300, 8.5052, 7.7924, 7.2116};
+ 	//All of the numbers
+	public static void main(String[] args)
+	{
+		//Adds numbers together and finds the average
+		double sum = 0;
+		for(int i=0; i < scores.length; i++)
+			sum = sum + scores[i];
+		double average = sum / scores.length;
+		//Adds numbers together and finds the average
+		
+		//Random number grabbing and calculating
+		double[] score1 = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+		int z = 0;
+		for(int q = 1; q <= 20; ++q)
+		{
+		Random rand = new Random();
+		int grab = rand.nextInt(45 - 0);
+		++z;
+		System.out.println("Number grabbed from number set: " + scores[grab]);
+		System.out.println("Number to insert into current dataset: " + z);
+		System.out.println("Number transferred to current dataset: " + score1[z]);
+		if(score1[z] == scores[grab])
+		{
+			System.out.println("Insertion success!");
+		}
+		else
+		{
+			System.out.println("Insertion failure!");
+		}
+		}
+		
+		//Actually displays information
+		System.out.println("Sum: " + sum);
+		System.out.println("Mean: " + average);
+		//Actually displays information
+	}
+
+}
